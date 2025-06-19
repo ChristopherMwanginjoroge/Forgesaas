@@ -32,4 +32,17 @@ class User(AbstractUser):
         return self.email
     
 
+class Otp(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    otp_code=models.CharField(max_length=6)
+    created_at=models.DateTimeField(auto_now_add=True)
+    expires_at=models.DateTimeField()
+    token_code=models.CharField(max_length=64)
+
+
+    def __str__(self):
+        return self.user.email
+
+    
+
   
