@@ -30,6 +30,8 @@ urlpatterns = [
     path('accounts/',include('accounts.urls')),
     path('projects/',include('projects.urls')),
     path('tools/',include('tools.urls')),
+    path('mpesa/',include('mpesa.urls')),
+    
 
 
 
